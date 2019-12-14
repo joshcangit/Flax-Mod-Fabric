@@ -17,6 +17,15 @@
                     ],
                     "name":"minecraft:string"
                 }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:block_state_property",
+                    "block": "flax:flax",
+                    "properties": {
+                        "age": "7"
+                    }
+                }
             ]
         },
         {
@@ -30,7 +39,7 @@
                             "enchantment": "minecraft:fortune",
                             "formula": "minecraft:binomial_with_bonus_count",
                             "parameters": {
-                                "extra": 3,
+                                "extra": 2,
                                 "probability": 0.5714286
                             }
                         }
@@ -45,6 +54,15 @@
                     "properties": {
                         "age": "7"
                     }
+                }
+            ]
+        },
+        {
+            "rolls": 1.0,
+            "entries":[
+                {
+                    "type": "minecraft:item",
+                    "name": "flax:flax_seeds"
                 }
             ]
         }
