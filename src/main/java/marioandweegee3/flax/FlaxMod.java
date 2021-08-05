@@ -1,5 +1,8 @@
 package marioandweegee3.flax;
 
+import java.util.HashSet;
+import java.util.Collections;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -36,11 +39,10 @@ public class FlaxMod implements ModInitializer {
         registerCrop("flax", FMBlocks.flaxCrop);
 
         LootTableLoadingCallback.EVENT.register(
-            (resourceManager, lootManager, identifier, supplier, setter) -> {
-                if (identifier.getPath().equalsIgnoreCase("blocks/grass") ||
-                    identifier.getPath().equalsIgnoreCase("blocks/tall_grass") ||
-                    identifier.getPath().equalsIgnoreCase("blocks/fern") ||
-                    identifier.getPath().equalsIgnoreCase("blocks/large_fern")) {
+            (resourceManager, lootManager, id, supplier, setter) -> {
+                HashSet<String> hs = new HashSet<String>();
+                Collections.addAll(hs, "blocks/grass", "blocks/tall_grass", "blocks/fern", "blocks/large_fern");
+                if (hs.contains(id.getPath())) {
                     FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder
                         .builder()
                         .rolls(UniformLootNumberProvider.create(0, 1))
