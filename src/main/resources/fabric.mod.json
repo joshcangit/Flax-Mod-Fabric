@@ -13,7 +13,7 @@
   },
 
   "license": "",
-  "icon": "assets/flax/textures/icon.png",
+  "icon": "assets/flax/textures/logo.png",
 
   "environment": "*",
   "entrypoints": {
