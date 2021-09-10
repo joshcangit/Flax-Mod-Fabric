@@ -25,6 +25,9 @@ dependencies {
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     compileOnly "squeek.appleskin:appleskin-fabric:${project.appleskin_version}"
+
+    implementation "blue.endless:jankson:1.2.+"
+    include "blue.endless:jankson:1.2.+"
 }
 
 processResources {
